@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogForest.BusinessLayer.Abstract
+namespace BlogForest.DataAccessLayer.Abstract
 {
-    public interface IBlogService:IGenericService<Blog>
+    public interface IAppUserDal:IGenericDal<AppUser>
     {
-        List<Blog> TGetBlogsWithCategoryAndUser();
+
     }
 }
