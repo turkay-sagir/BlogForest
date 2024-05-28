@@ -23,6 +23,11 @@ namespace BlogForest.BusinessLayer.Concrete
             _blogDal.Delete(id);
         }
 
+        public List<Blog> TGetBlogsByAppUser(int id)
+        {
+            return _blogDal.GetBlogsByAppUser(id);
+        }
+
         public List<Blog> TGetBlogsWithCategoryAndUser()
         {
             return _blogDal.GetBlogsWithCategoryAndUser();

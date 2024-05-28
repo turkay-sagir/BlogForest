@@ -17,6 +17,12 @@ namespace BlogForest.DataAccessLayer.EntityFramework
         {
         }
 
+        public List<Blog> GetBlogsByAppUser(int id)
+        {
+            var context = new BlogContext();
+            return context.Blogs.Where(x=>x.AppUserId == id).Include(x => x.Category).Include(y => y.AppUser).ToList();
+        }
+
         public List<Blog> GetBlogsWithCategoryAndUser()
         {
             var context = new BlogContext();

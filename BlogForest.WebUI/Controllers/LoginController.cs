@@ -26,7 +26,7 @@ namespace BlogForest.WebUI.Controllers
             var result = await _signInManager.PasswordSignInAsync(createLoginDto.Username, createLoginDto.Password,false,false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index","Profile");
+                return RedirectToAction("MyBlogList","Blog",new {area="User"});
             }
 
             return View();
